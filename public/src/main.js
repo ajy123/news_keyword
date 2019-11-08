@@ -1,61 +1,66 @@
 "use strict";
 const chart = () => {
 
-        const data = {
-          nodes:[
-          {
-            id: "2015",
-            group: "Year",
-            date: "2010-01",
-          },
-          {
-            id: "Keyword",
-            group: "Keyword",
-            date: "2010-01'",
-          },
-          {
-            id: "Keywordtwo",
-            group: "Keyword",
-            date: "2010-01",
-          },
-          {
-            id: "Article",
-            group: "Article",
-            date: "2010-01",
-          },
-          {
-            id: "2016",
-            group: "Year",
-            date: "2016-02'",
-          } 
-        ],
-        links:[
-          {
-            source: "Keyword" ,
-            target: "2015",
-            value: 2
-          },
-          {
-            source: "Keywordtwo",
-            target: "2015",
-            value: 2
-          },
-          {
-            source: "Keyword",
-            target: "Article",
-            value: 2
-          }
-          // {
-          //   1:{
-          //   source: "Structural basis of PROTAC cooperative recognition for selective protein degradation.",
-          //   target: "074-937-457-594-345",
-          //   value: 2
-          //     }
-          // }
-        ]
-    }
+    //     const data = {
+    //       nodes:[
+    //       {
+    //         id: "2015",
+    //         group: "Year",
+    //         date: "2010-01",
+    //       },
+    //       {
+    //         id: "Keyword",
+    //         group: "Keyword",
+    //         date: "2010-01'",
+    //       },
+    //       {
+    //         id: "Keywordtwo",
+    //         group: "Keyword",
+    //         date: "2010-01",
+    //       },
+    //       {
+    //         id: "Article",
+    //         group: "Article",
+    //         date: "2010-01",
+    //       },
+    //       {
+    //         id: "Article",
+    //         group: "Article",
+    //         date: "2010-01",
+    //       },
+    //       {
+    //         id: "2016",
+    //         group: "Year",
+    //         date: "2016-02'",
+    //       } 
+    //     ],
+    //     links:[
+    //       {
+    //         source: "Keyword" ,
+    //         target: "2015",
+    //         value: 2
+    //       },
+    //       {
+    //         source: "Keywordtwo",
+    //         target: "2015",
+    //         value: 2
+    //       },
+    //       {
+    //         source: "Keyword",
+    //         target: "Article",
+    //         value: 2
+    //       }
+    //       // {
+    //       //   1:{
+    //       //   source: "Structural basis of PROTAC cooperative recognition for selective protein degradation.",
+    //       //   target: "074-937-457-594-345",
+    //       //   value: 2
+    //       //     }
+    //       // }
+    //     ]
+    // }
     
-    // d3.json("../data/network_2010-01_final_1_nyt.json").then(function(data) {
+    d3.json("../data/links.json").then(function(data) {
         const links = data.links
         const nodes = data.nodes
         const color =  d3.scaleOrdinal(d3.schemeCategory10);
@@ -152,7 +157,7 @@ const chart = () => {
               .attr("x", function(d) { return d.x; })
               .attr("y", function(d) { return d.y; });  
         });
-    // })
+    })
 };
 
 chart();

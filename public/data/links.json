@@ -1,0 +1,690 @@
+{"nodes":[
+    {
+        "id": "2010",
+        "group": "year"
+    },
+    {
+        "id": "2011",
+        "group": "year"
+    },
+    {
+        "id": "2012",
+        "group": "year"
+    },
+    {
+        "id": "2013",
+        "group": "year"
+    },
+    {
+        "id": "2014",
+        "group": "year"
+    },
+    {
+        "id": "2015",
+        "group": "year"
+    },
+    {
+        "id": "2016",
+        "group": "year"
+    },
+    {
+        "id": "2017",
+        "group": "year"
+    },
+    {
+        "id": "2018",
+        "group": "year"
+    },
+    {
+        "id": "2019",
+        "group": "year"
+    },
+    {
+        "id": "01",
+        "group": "month",
+        "date": "2010-01"
+    },
+    {
+        "id": "02",
+        "group": "month",
+        "date": "2010-02"
+    },
+    {
+        "id": "03",
+        "group": "month",
+        "date": "2010-03"
+    },
+    {
+        "id": "04",
+        "group": "month",
+        "date": "2010-04"
+    },
+    {
+        "id": "05",
+        "group": "month",
+        "date": "2010-05"
+    },
+    {
+        "id": "06",
+        "group": "month",
+        "date": "2010-06"
+    },
+    {
+        "id": "07",
+        "group": "month",
+        "date": "2010-07"
+    },
+    {
+        "id": "08",
+        "group": "month",
+        "date": "2010-08"
+    },
+    {
+        "id": "09",
+        "group": "month",
+        "date": "2010-09"
+    },
+    {
+        "id": "10",
+        "group": "month",
+        "date": "2010-10"
+    },
+    {
+        "id": "11",
+        "group": "month",
+        "date": "2010-11"
+    },
+    {
+        "id": "12",
+        "group": "month",
+        "date": "2010-12"
+    }
+]
+,"links":[
+    {
+        "source": "2010",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "09",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "10",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "11",
+        "value": 2
+    },
+    {
+        "source": "2010",
+        "target": "12",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "09",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "10",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "11",
+        "value": 2
+    },
+    {
+        "source": "2011",
+        "target": "12",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "09",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "10",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "11",
+        "value": 2
+    },
+    {
+        "source": "2012",
+        "target": "12",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "09",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "10",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "11",
+        "value": 2
+    },
+    {
+        "source": "2013",
+        "target": "12",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "09",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "10",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "11",
+        "value": 2
+    },
+    {
+        "source": "2014",
+        "target": "12",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "09",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "10",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "11",
+        "value": 2
+    },
+    {
+        "source": "2015",
+        "target": "12",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "09",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "10",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "11",
+        "value": 2
+    },
+    {
+        "source": "2016",
+        "target": "12",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "09",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "10",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "11",
+        "value": 2
+    },
+    {
+        "source": "2017",
+        "target": "12",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "09",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "10",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "11",
+        "value": 2
+    },
+    {
+        "source": "2018",
+        "target": "12",
+        "value": 2
+    },
+    {
+        "source": "2019",
+        "target": "01",
+        "value": 2
+    },
+    {
+        "source": "2019",
+        "target": "02",
+        "value": 2
+    },
+    {
+        "source": "2019",
+        "target": "03",
+        "value": 2
+    },
+    {
+        "source": "2019",
+        "target": "04",
+        "value": 2
+    },
+    {
+        "source": "2019",
+        "target": "05",
+        "value": 2
+    },
+    {
+        "source": "2019",
+        "target": "06",
+        "value": 2
+    },
+    {
+        "source": "2019",
+        "target": "07",
+        "value": 2
+    },
+    {
+        "source": "2019",
+        "target": "08",
+        "value": 2
+    },
+    {
+        "source": "2019",
+        "target": "09",
+        "value": 2
+    }
+]
+}
