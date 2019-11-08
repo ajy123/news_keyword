@@ -1,0 +1,168 @@
+
+[
+        {
+            "group": "nodes",
+            "data": {
+                "id":"inheritance and estate taxes",
+                "label":"inheritance and estate taxes",
+                "date":"2010-01-01T00:00:00Z",
+                "group":"keyword"
+            },
+            "renderedPosition": {
+                "x": 258.3076295355788,
+                "y": 98.28608745057241
+            },
+            "selected": false,
+            "locked": false,
+            "grabbable": true,
+            "selectable": true
+        },
+        {
+            "group": "nodes",
+            "data": {
+                "id":"inheritance and estate taxes",
+                "label":"inheritance and estate taxes",
+                "date":"2011-01-01T00:00:00Z",
+                "group":"keyword"
+            },
+            "position": {
+                "x": -0.3076295355788,
+                "y": 98.28608745057241
+            },
+            "selected": false,
+            "locked": false,
+            "grabbable": true,
+            "selectable": true
+        },
+        {
+            "group": "nodes",
+            "data": {
+                "id":"2010-01",
+                "label":"Jan",
+                "date":"2010-01",
+                "group":"date"
+            },
+            "selected": false,
+            "locked": false,
+            "grabbable": true,
+            "selectable": true
+        },
+        {
+            "group": "nodes",
+            "data": {
+                "id":"2010",
+                "label":"2010",
+                "date":"2010",
+                "group":"year"
+            },
+            "selected": false,
+            "locked": false,
+            "grabbable": true,
+            "selectable": true
+        },
+        {
+            "group": "nodes",
+            "data": {
+                "id":"2011",
+                "label":"2011",
+                "date":"2011",
+                "group":"year"
+            },
+            "selected": false,
+            "locked": false,
+            "grabbable": true,
+            "selectable": true
+        },
+        {
+            "group": "nodes",
+            "data": {
+                "id":"2011-11",
+                "label":"Nov",
+                "date":"2011-11-01T00:00:00Z",
+                "group":"date"
+            },
+            "selected": false,
+            "locked": false,
+            "grabbable": true,
+            "selectable": true
+        },
+        {
+            "group": "nodes",
+            "data": {
+                "id":"article One",
+                "label":"article One",
+                "date":"2011-11-01T00:00:00Z",
+                "group":"article"
+            },
+            "selected": false,
+            "locked": false,
+            "grabbable": true,
+            "selectable": true
+        },
+        {
+            "group": "edges",
+            "data": {
+              "source": "inheritance and estate taxes",
+              "target": "article One",
+              "weight": 0.019493334,
+              "id": "inheritance and estate taxes_articleOne"
+            },
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true
+        },
+        {
+            "group": "edges",
+            "data": {
+              "source": "inheritance and estate taxes",
+              "target": "2011-11",
+              "weight": 0.019493334,
+              "id": "inheritance and estate taxes_2011-11"
+            },
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true
+        },
+        {
+            "group": "edges",
+            "data": {
+              "source": "inheritance and estate taxes",
+              "target": "2010-01",
+              "weight": 0.019493334,
+              "id": "inheritance and estate taxes_2010-01-01"
+            },
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true
+        },
+        {
+            "group": "edges",
+            "data": {
+              "source": "2010-01",
+              "target": "2010",
+              "weight": 0.02,
+              "id": "2010-01_2010"
+            },
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true
+        },
+        {
+            "group": "edges",
+            "data": {
+              "source": "2011-11",
+              "target": "2011",
+              "weight": 0.02,
+              "id": "2011-01_2011"
+            },
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true
+        }
+        
+]

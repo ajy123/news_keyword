@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>news_keyword</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">    
+    <style type="text/css">
+        .svg-container { 
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            vertical-align: middle; 
+            overflow: hidden; 
+            font-family: 'Roboto Mono'
+          }
+        .svg-content-responsive {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+          }
+        p {
+            text-align:center;
+            margin: 200px 350px 25px 350px;
+            font-family: 'Roboto Mono', monospace;
+          }
+        div.tooltip { 
+          position: absolute;     
+          text-align: left; 
+          width: auto;          
+          height: auto; 
+          padding: 5px;       
+          font: 14px 'Roboto Mono';    
+          background: white; 
+          border: rgba(0,0,0,0.3) solid 1px;
+          pointer-events: none;  
+          opacity: 0.5;   
+        }
+        </style>
+  </head>
+  <body>
+    <script type="text/javascript" src="src/d3.min.js"></script>
+    <div class="svg-container" id="forceChart"></div>
+    <script type="text/javascript" src="src/main.js" id="mainCode"></script>
+  </body>
+</html>
