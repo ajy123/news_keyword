@@ -1,66 +1,39 @@
 "use strict";
-const chart = () => {
+async function data(){
+      
+  const response = await fetch('/api'); 
+  const data = await response.json();
+  console.log(data)
+  console.log('d3 chart')
+}
+data(); 
 
-    //     const data = {
-    //       nodes:[
-    //       {
-    //         id: "2015",
-    //         group: "Year",
-    //         date: "2010-01",
-    //       },
-    //       {
-    //         id: "Keyword",
-    //         group: "Keyword",
-    //         date: "2010-01'",
-    //       },
-    //       {
-    //         id: "Keywordtwo",
-    //         group: "Keyword",
-    //         date: "2010-01",
-    //       },
-    //       {
-    //         id: "Article",
-    //         group: "Article",
-    //         date: "2010-01",
-    //       },
-    //       {
-    //         id: "Article",
-    //         group: "Article",
-    //         date: "2010-01",
-    //       },
-    //       {
-    //         id: "2016",
-    //         group: "Year",
-    //         date: "2016-02'",
-    //       } 
-    //     ],
-    //     links:[
-    //       {
-    //         source: "Keyword" ,
-    //         target: "2015",
-    //         value: 2
-    //       },
-    //       {
-    //         source: "Keywordtwo",
-    //         target: "2015",
-    //         value: 2
-    //       },
-    //       {
-    //         source: "Keyword",
-    //         target: "Article",
-    //         value: 2
-    //       }
-    //       // {
-    //       //   1:{
-    //       //   source: "Structural basis of PROTAC cooperative recognition for selective protein degradation.",
-    //       //   target: "074-937-457-594-345",
-    //       //   value: 2
-    //       //     }
-    //       // }
-    //     ]
-    // }
+const d = document.getElementById('Success').innerHTML;
+console.log(d);
+
+let key = "Democratic Party"
+
+const button = document.getElementById(`${key}`);
+    button.addEventListener('click', async event => {
+      const data = [document.getElementById(`${key}`).innerHTML];
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      };
+      const response = await fetch('/req', options);
+      const json = await response.json();
+      console.log(json);
+
+      chart(json); 
+    });
+
+
+const chart = (data) => {
     
-    d3.json("../data/links.json").then(function(data) {
+    // d3.json("../data/links.json").then(function(data) {
         const links = data.links
         const nodes = data.nodes
         const color =  d3.scaleOrdinal(d3.schemeCategory10);
@@ -82,8 +55,8 @@ const chart = () => {
             .attr("viewBox", [-width/2,-height/2, width, height]);
       
         const link = svg.append("g")
-            .attr("stroke", "black")
-            // .attr("stroke-opacity", 0.6)
+            .attr("stroke", "#999")
+            .attr("stroke-opacity", 0.6)
           .selectAll("line")
           .data(links)
           .join("line")
@@ -157,16 +130,10 @@ const chart = () => {
               .attr("x", function(d) { return d.x; })
               .attr("y", function(d) { return d.y; });  
         });
-    })
+    // })
 };
 
-chart();
+// chart();
 
-async function data(){
-      
-    const response = await fetch('/api'); 
-    const data = await response.json();
-    console.log(data)
-    console.log('d3 chart')
-}
-data(); 
+
+

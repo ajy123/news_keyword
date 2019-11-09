@@ -38,11 +38,27 @@
           pointer-events: none;  
           opacity: 0.5;   
         }
+        .btn {  
+          border: none;
+          background-color: inherit;
+          padding: 14px 28px;
+          font: 14px 'Roboto Mono'; 
+          cursor: pointer;
+          display: inline-block;
+        }
+
+        .btn:hover {background: #eee;}
+        .default {color: black;}
         </style>
   </head>
   <body>
     <script type="text/javascript" src="src/d3.min.js"></script>
+    <button id = "Success" class="btn default">Success</button>
+    <button id = "Democratic Party"class="btn default">Democratic Party</button>
+    <button id = "education (k-12)" class="btn default">education (k-12)</button>
+    <button id = "Met Breuer" class="btn default">Met Breuer</button>
     <div class="svg-container" id="forceChart"></div>
-    <script type="text/javascript" src="src/main.js" id="mainCode"></script>
   </body>
+    <script type="text/javascript" src="src/main.js" id="mainCode"></script>
+
 </html>
