@@ -7,6 +7,33 @@
     <title>news_keyword</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">    
     <style type="text/css">
+        .wrapper {
+        display: flex;
+        justify-content: space-between;
+        }
+
+        .main,
+        .sidebar {
+          border: 3px solid black;
+          padding: 15px;
+          background-color: #fff;
+        }
+
+        .main {
+          width: 15%;
+          height: 150vh;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 85%;
+          height: 95vh;
+          position: -webkit-sticky;
+          position: sticky;
+          top: 0;
+        }
+
         .svg-container { 
             display: inline-block;
             position: relative;
@@ -49,15 +76,64 @@
 
         .btn:hover {background: #eee;}
         .default {color: black;}
+
+        button {  
+          border: none;
+          background-color: inherit;
+          padding: 14px 28px;
+          font: 14px 'Roboto Mono'; 
+          cursor: pointer;
+          display: inline-block;
+
+        }
+
+        #searchTextbox{
+          border: none;
+          background-color: inherit;
+          padding: 14px 28px;
+          font: 14px 'Roboto Mono'; 
+          cursor: pointer;
+          display: inline-block;
+          border-bottom: rgba(0,0,0) solid 3px;
+          box-shadow: 0 2px 6px rbga(0,0,0,0.5);
+          /* border-radius: 2px; */
+          box-sizing: border-box; 
+          overflow: hidden;
+        }
+        /*try out search box*/
+        ul{
+          List-style: none; 
+          display: inline-block; 
+        }
+        li{
+          width: 150px;
+          height: 50px; 
+          float: center;
+          text-align: center;
+        }
+
         </style>
   </head>
   <body>
     <script type="text/javascript" src="src/d3.min.js"></script>
-    <button id = "Success" class="btn default">Success</button>
-    <button id = "Democratic Party"class="btn default">Democratic Party</button>
-    <button id = "education (k-12)" class="btn default">education (k-12)</button>
-    <button id = "Met Breuer" class="btn default">Met Breuer</button>
-    <div class="svg-container" id="forceChart"></div>
+    <script type="text/javascript" src="src/fuse.js"></script>
+    <div class = "wrapper">
+      <div class = "main" id = "keyword">
+        <!-- <button id = "Success" class="btn default">Success</button> -->
+        <input type = "text" class = "form-control" id= "searchTextbox" placeholder="Seach " onkeyup = "searchFunction()">
+        <!-- <ul id = "find">
+          <li>
+            <a href ="#">here</a>
+          </li>
+          <li>
+            <a href ="#">book</a>
+          </li>  
+        </ul> -->
+      </div>
+      <div class = "sidebar">
+        <div class="svg-container" id="forceChart"></div>
+      </div>
+    </div>
   </body>
     <script type="text/javascript" src="src/main.js" id="mainCode"></script>
 
