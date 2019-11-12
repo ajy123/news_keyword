@@ -2,6 +2,4 @@ node_modules
 cola.js
 cytoscape-cola.js
 cytoscape.js
-d3.min.js
 data.py
-fuse.js
