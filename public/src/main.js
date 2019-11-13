@@ -10,7 +10,10 @@ async function data(){
 data(); 
   let b = ["Education (K-12)","#MeToo Movement","New York City",
   "Women and Girls","Blacks","Computers and the Internet","Ethics (Personal)"
-  ,"Television","Labor and Jobs","Democratic Party"]
+  ,"Television","Labor and Jobs","Democratic Party", "Books and Literature"
+  ,"Discrimination","United States International Relations","Republican Party"
+  ,"Presidential Election of 2016","News and News Media"
+  ,"Health Insurance and Managed Care","Colleges and Universities","Fashion and Apparel"]
 
   // create list of button with class btn default 
   for(let i=0; i < b.length; i ++){
@@ -33,11 +36,12 @@ function searchFunction(){
   var input, filter, ul, li, a , i; 
   input = document.getElementById("searchTextbox")
   filter = input.value
-  ul = document.getElementById('find')
-  li = document.getElementsByTagName('li')
+  ul = document.getElementById("keyword")
+  li = document.getElementsByTagName('button')
   for(i = 0; i < li.length; i++){
-    a = li[i].getElementsByTagName('a')[0]
-    if(a.innerHTML.indexOf(filter) > -1){
+    console.log(li[i].innerHTML)
+
+    if(li[i].innerHTML.indexOf(filter) > -1){
       li[i].style.display = '';
     }else{
       li[i].style.display = 'none';
@@ -205,11 +209,11 @@ const hierarchy = (data) =>{
   .join("path")
     .attr("d", d3.linkRadial()
         .angle(d => d.x)
-        .radius(d => d.y));
+        .radius(d=> d.y));
 
   const node = svg.append("g")
     .attr("stroke-linejoin", "round")
-    .attr("stroke-width", 3)
+    .attr("stroke-width", 10)
   .selectAll("g")
   .data(root.descendants().reverse())
   .join("g")
@@ -225,7 +229,7 @@ const hierarchy = (data) =>{
 
   node.append("circle")
     .attr("fill", d => d.children ? "#555" : "#999")
-    .attr("r", 2.5)
+    .attr("r", 3)
     .on("mouseover", function(d){
       div.transition()
         .duration(100)
@@ -260,5 +264,3 @@ const hierarchy = (data) =>{
   .clone(true).lower()
     .attr("stroke", "white");
   }
-
-// hierarchy(h);
