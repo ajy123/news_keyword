@@ -24,7 +24,7 @@
 
         .main {
           width: 15%;
-          height: 150vh;
+          height: 125vh;
           display: flex;
           flex-direction: column;
         }
@@ -48,12 +48,13 @@
         .svg-content-responsive {
             display: inline-block;
             position: absolute;
-            top: 10px;
+            /* top: 10px; */
             left: 0;
+            background:white;
           }
         p {
             text-align:center;
-            margin: 200px 350px 25px 350px;
+            /* margin: 200px 350px 25px 350px; */
             font-family: 'Roboto Mono', monospace;
           }
         div.tooltip { 
@@ -68,17 +69,6 @@
           pointer-events: none;  
           opacity: 0.5;   
         }
-        .btn {  
-          border: none;
-          background-color: inherit;
-          padding: 14px 28px;
-          font: 14px 'Roboto Mono'; 
-          cursor: pointer;
-          display: inline-block;
-        }
-
-        .btn:hover {background: #eee;}
-        .default {color: black;}
 
         button {  
           border: none;
@@ -88,6 +78,9 @@
           cursor: pointer;
           display: inline-block;
 
+        }
+        button:hover{
+          background-color:gray;
         }
 
         #searchTextbox{
@@ -103,38 +96,63 @@
           box-sizing: border-box; 
           overflow: hidden;
         }
-        /*try out search box*/
-        ul{
-          List-style: none; 
-          display: inline-block; 
+        /* Style the button that is used to open and close the collapsible content */
+        .collapsible {
+          background-color: #eee;
+          color: #444;
+          cursor: pointer;
+          padding: 10px;
+          width: 25%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 12px;
         }
-        li{
-          width: 150px;
-          height: 50px; 
-          float: center;
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active, .collapsible:hover {
+          background-color: #ccc;
+        }
+        .footer {
+          position: fixed;
+          right: 0;
+          bottom: 30px;
+          width: 82.5%;
+          height: 10px;
+          /* background-color: white; */
+          /* color: white; */
           text-align: center;
         }
+        #footerText {
+            font: 10px 'Roboto Mono'; 
+            text-align:center;
+            top: 0;
+            color: gray;
+        }
+
 
         </style>
   </head>
   <body>
     <div class = "wrapper">
       <div class = "main" id = "keyword">
-        <!-- <button id = "Success" class="btn default">Success</button> -->
         <input type = "text" class = "form-control" id= "searchTextbox" placeholder="Seach " onkeyup = "searchFunction()">
-        <!-- <ul id = "find">
-          <li>
-            <a href ="#">here</a>
-          </li>
-          <li>
-            <a href ="#">book</a>
-          </li>  
-        </ul> -->
       </div>
       <div class = "sidebar">
-        <div class="svg-container" id="forceChart"></div>
+        <button type="button" class="collapsible"> How to read this graph?</button>
+        
+        <div class="svg-container" id="forceChart">
+
+        </div>
+        <div class="footer">
+            <!-- <span style='font-size:10px;'>&#128155;</span> -->
+            <p id = "footerText">Made with &#128155;from Brooklyn</p></div>
+        
       </div>
+
+
     </div>
+
   </body>
     <script type="text/javascript" src="src/main.js" id="mainCode"></script>
 

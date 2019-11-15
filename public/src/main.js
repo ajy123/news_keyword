@@ -178,13 +178,6 @@ const hierarchy = (data) =>{
     .size([2 * Math.PI, radius])
     .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth)
 
-  console.log("lets get it")
-  console.log(data)
-  // const stratify = d3.stratify()
-  //               .id((d)=> d.name)
-  //               .parentId((d)=> d.parent);
-
-  // const root = stratify(data)
   const root = tree(d3.hierarchy(data)
       .sort((a, b) => d3.ascending(a.data.name, b.data.name)));
   
@@ -194,9 +187,9 @@ const hierarchy = (data) =>{
 
   const svg = d3.select("#forceChart")
       .append("svg")
-      .attr("viewBox", [-width/2,-height/3, width, height])
+      .attr("viewBox", [-width/2,-height/2.68, width, height])
       .style("font", "10px sans-serif")
-      .style("margin", "5px");
+      .style("margin", "15px");
 
   const link = svg.append("g")
     .attr("fill", "none")
@@ -210,10 +203,26 @@ const hierarchy = (data) =>{
     .attr("d", d3.linkRadial()
         .angle(d => d.x)
         .radius(d=> d.y));
+  
+  const hover = svg.append("g")
+  .attr("stroke-linejoin", "round")
+  .attr("stroke-width", 10)
+.selectAll("g")
+.data(root.descendants().reverse())
+.join("g")
+  .attr("transform", d => `
+    rotate(${d.x * 180 / Math.PI - 90})
+    translate(${d.y},0)
+  `).append("circle")
+  .attr("r", d => d.children ? 5 : 0.5)
+  .attr("stroke", d => d.children ? "#333" : "#999")
+
+
 
   const node = svg.append("g")
     .attr("stroke-linejoin", "round")
     .attr("stroke-width", 10)
+    // .attr("fill", "none")
   .selectAll("g")
   .data(root.descendants().reverse())
   .join("g")
@@ -227,9 +236,14 @@ const hierarchy = (data) =>{
     .attr("class", "tooltip")
     .style("opacity", 0)
 
+
   node.append("circle")
-    .attr("fill", d => d.children ? "#555" : "#999")
-    .attr("r", 3)
+    .attr("stroke", d => d.children ? "none" : "#999")
+    .attr("stroke-width", 1.5)
+    .attr("opacity", d => d.children ? 1 : 0.1)
+    .attr("fill", d => d.children ? "#333" : "none")
+    // .attr("fill", "none")
+    .attr("r", d => d.children ? 5 : 20)
     .on("mouseover", function(d){
       div.transition()
         .duration(100)
@@ -254,9 +268,17 @@ const hierarchy = (data) =>{
           element.style("fill", d.pixel)
         });
 
+  
   node.filter(function(d){return d.data.parent == null})
     .append("text")
-    .text((d)=>console.log(d.data.name))
+    .text(function(d){
+      // console.log(d)
+      if(d.parent == null || d.depth == 1){
+        return d.data.name
+      }else{
+        return null
+      }
+    })
     .attr("dy", "0.31em")
     .attr("x", d => d.x < Math.PI === !d.children ? 6 : -6)
     .attr("text-anchor", d => d.x < Math.PI === !d.children ? "start" : "end")
@@ -264,3 +286,18 @@ const hierarchy = (data) =>{
   .clone(true).lower()
     .attr("stroke", "white");
   }
+
+
+  // create how to read
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      window.alert("sometext");
+      this.classList.toggle("active");
+      // var content = this.nextElementSibling;
+    });
+  }
+
+  // create footer
