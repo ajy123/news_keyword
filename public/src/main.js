@@ -294,7 +294,7 @@ const hierarchy = (data) =>{
 
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-      window.alert("sometext");
+      window.alert("Hover over the outer circle to discover questions The New York Times is asking from 2010-2019 Sept");
       this.classList.toggle("active");
       // var content = this.nextElementSibling;
     });
