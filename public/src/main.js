@@ -187,7 +187,7 @@ const hierarchy = (data) =>{
 
   const svg = d3.select("#forceChart")
       .append("svg")
-      .attr("viewBox", [-width/2,-height/2.7, width, height])
+      .attr("viewBox", [-width/2,-height/2.75, width, height])
       .style("font", "10px sans-serif")
       .style("margin", "15px");
 
