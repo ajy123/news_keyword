@@ -187,7 +187,7 @@ const hierarchy = (data) =>{
 
   const svg = d3.select("#forceChart")
       .append("svg")
-      .attr("viewBox", [-width/2,-height/2.68, width, height])
+      .attr("viewBox", [-width/2,-height/2.7, width, height])
       .style("font", "10px sans-serif")
       .style("margin", "15px");
 
@@ -294,7 +294,7 @@ const hierarchy = (data) =>{
 
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-      window.alert("Hover over the outer circle to discover questions The New York Times is asking from 2010-2019 Sept");
+      window.alert("Hover over the outer circle to discover questions The New York Times was asking from 2010-2019 Sept");
       this.classList.toggle("active");
       // var content = this.nextElementSibling;
     });
