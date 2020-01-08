@@ -25,7 +25,7 @@ app.post('/req',(request,response)=>{
     console.log(request.body);
     const tryout = request.body;
     // request.body to create link data
-    fs.readFile("public/data/article_nyt.json", (err, info)=>{
+    fs.readFile("public/data/allQ.json", (err, info)=>{
         const selected = []
 
         if (err) throw err;

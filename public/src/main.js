@@ -8,12 +8,11 @@ async function data(){
 }
 
 data(); 
-  let b = ["Education (K-12)","#MeToo Movement","New York City",
-  "Women and Girls","Blacks","Computers and the Internet","Ethics (Personal)"
+  let b = ["Global Warming","Greenhouse Gas Emissions", "Education (K-12)","#MeToo Movement","New York City",
+  "Women and Girls","Carbon Dioxide","Computers and the Internet","Ethics (Personal)"
   ,"Television","Labor and Jobs","Democratic Party", "Books and Literature"
   ,"Discrimination","United States International Relations","Republican Party"
-  ,"Presidential Election of 2016","News and News Media"
-  ,"Health Insurance and Managed Care","Colleges and Universities","Fashion and Apparel"]
+  ,"News and News Media","Health Insurance and Managed Care","Colleges and Universities","Fashion and Apparel"]
 
   // create list of button with class btn default 
   for(let i=0; i < b.length; i ++){
@@ -175,7 +174,7 @@ const hierarchy = (data) =>{
 
   const radius = 400
   const tree = d3.tree()
-    .size([2 * Math.PI, radius])
+    .size([2 * Math.PI,radius])
     .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth)
 
   const root = tree(d3.hierarchy(data)
@@ -204,6 +203,7 @@ const hierarchy = (data) =>{
         .angle(d => d.x)
         .radius(d=> d.y));
   
+// hover == node
   const hover = svg.append("g")
   .attr("stroke-linejoin", "round")
   .attr("stroke-width", 10)
@@ -214,11 +214,10 @@ const hierarchy = (data) =>{
     rotate(${d.x * 180 / Math.PI - 90})
     translate(${d.y},0)
   `).append("circle")
-  .attr("r", d => d.children ? 5 : 0.5)
-  .attr("stroke", d => d.children ? "#333" : "#999")
+  .attr("r", d => d.children ? 5 : 1)
+  .attr("stroke", d => d.children ? "#333" : "#333")
 
-
-
+// node == hover
   const node = svg.append("g")
     .attr("stroke-linejoin", "round")
     .attr("stroke-width", 10)
@@ -235,19 +234,36 @@ const hierarchy = (data) =>{
     .append("div")
     .attr("class", "tooltip")
     .style("opacity", 0)
+  
+  // const divClicked = d3.select("body")
+  //   .append("div")
+  //   .attr("class", "tooltipClicked")
+  //   .style("opacity", 0)
 
 
   node.append("circle")
-    .attr("stroke", d => d.children ? "none" : "#999")
-    .attr("stroke-width", 1.5)
-    .attr("opacity", d => d.children ? 1 : 0.1)
+    .attr("stroke", d => d.children ? "none" : "#000")
+    .attr("stroke-width", 1)
+    .attr("opacity", d => d.children ? 0.1 : 0.5)
     .attr("fill", d => d.children ? "#333" : "none")
     // .attr("fill", "none")
-    .attr("r", d => d.children ? 5 : 20)
+    .attr("r", d => d.children ? 5 : 12)
+    // .on("click", function(d){
+    //   divClicked.transition()
+    //   .duration(100)
+    //   .style("opacity", 0.8)
+    //   var element = d3.select(this)
+    //   element.style("fill", "Black")
+    //   divClicked.html("<span style = 'font-weight: bold'>" 
+    //       + d.data.name + "<br>")
+    //   divClicked.style("visibility", "visible")
+    //       .style("left",  width/2 + "px")    
+    //       .style("top", height/2 + "px")
+    // })
     .on("mouseover", function(d){
       div.transition()
         .duration(100)
-        .style("opacity",1)
+        .style("opacity", 0.95)
         var element = d3.select(this)
           element.style("fill", "Black")
           div.html("<span style = 'font-weight: bold'>" 
@@ -256,13 +272,13 @@ const hierarchy = (data) =>{
           .style("left", (d3.event.pageX - 20) + "px")    
           .style("top", (d3.event.pageY - 35) + "px")
         })
-        .on("mousemove", function(d){
-          div.style("left", (d3.event.pageX) + "px")    
-          .style("top", (d3.event.pageY - 35) + "px")
-        })
-        .on("mouseout", function(d){
+    // .on("mousemove", function(d){
+    //       div.style("left", (d3.event.pageX) + "px")    
+    //       .style("top", (d3.event.pageY - 35) + "px")
+    //     })
+    .on("mouseout", function(d){
           div.transition()
-          .duration(500)
+          .duration(100)
           div.style("visibility", "hidden")
           var element = d3.select(this)
           element.style("fill", d.pixel)
@@ -294,7 +310,7 @@ const hierarchy = (data) =>{
 
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-      window.alert("Hover over the outer circle to discover questions The New York Times was asking from 2010-2019 Sept");
+      window.alert("Hover to discover questions The New York Times was asking from 2010-2019");
       this.classList.toggle("active");
       // var content = this.nextElementSibling;
     });
