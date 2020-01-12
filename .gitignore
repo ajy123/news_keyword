@@ -3,3 +3,6 @@ cola.js
 cytoscape-cola.js
 cytoscape.js
 data.py
+**/public/data/nyt/
+**/public/data/test/
+**/public/data/duplicate/
